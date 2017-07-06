@@ -3,5 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "eSender",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --colors --reporter dot --watch"
+  },
+  "devDependencies": {
+    "chai": "^4.0.2",
+    "mocha": "^3.4.2"
+  }
 }
