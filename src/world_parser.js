@@ -7,7 +7,7 @@ class WorldParser {
 
   parse(screen) {
     screen.forEach((row, y) => {
-      row.forEach((cell, x) => {
+      row.split().forEach((cell, x) => {
         const point = new Point(x, y);
 
         this.set(point, cell);
