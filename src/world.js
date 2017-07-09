@@ -1,3 +1,5 @@
+const Player = require('./entities/player');
+
 class World {
   constructor(w, h) {
     this.width = w;
@@ -16,6 +18,13 @@ class World {
 
   get(point) {
     return this.cells[point.y][point.x];
+  }
+
+  setPlayer(point) {
+    const player = new Player();
+    player.place(point);
+
+    this.player = player;
   }
 }
 

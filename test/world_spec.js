@@ -1,6 +1,7 @@
 const expect = require('chai').expect;
 const Point = require('../src/point');
 const World = require('../src/world');
+const Player = require('../src/entities/player');
 
 describe('World', () => {
   it('should return object', () => {
@@ -55,8 +56,12 @@ describe('World', () => {
       world.setPlayer(point);
     });
 
-    it.skip('add player to world', () => {
-      expect(world.player).to.be.a('Player');
+    it('add player to world', () => {
+      expect(world.player).to.be.instanceof(Player);
+    });
+
+    it('player has point', () => {
+      expect(world.player.point).to.be.equal(point);
     });
   });
 });
